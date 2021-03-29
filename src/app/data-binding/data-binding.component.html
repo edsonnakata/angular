@@ -1,1 +1,15 @@
-<app-meu-form></app-meu-form>
+<!--app-meu-form><app-meu-form-->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input/Output Properties</h3>
+
+    <!--
+      Passando uma propriedade desse component para o app-curso
+      Utilizando o property binding passo o valor da variável para dentro
+      do módulo app-curso. Porém é preciso dentro do input-property.component.ts
+      injetar uma marcação do core do angular
+    -->
+    <app-curso [nome]="nomeDoCurso"></app-curso>
+  </article>
+</section>
