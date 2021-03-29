@@ -7,17 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  nome: string = "abcde"
-
-  pessoa: any={
-    nome:"blablabla",
-    idade: 20,
-    endereco: {
-      rua: "rua tal",
-      numero: "4321-B"
-    }
-  }
-
   constructor() { }
 
   ngOnInit(): void {
