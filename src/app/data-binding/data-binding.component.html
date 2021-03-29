@@ -1,32 +1,37 @@
 <section class="event-binding">
 
   <article>
-    <h3>Event binding</h3>
+    <h3>Two-way-binding</h3>
     <div>
-      <button (click)="botaoClicado()"
-        class="btn btn-primary">
-        Me clique
-      </button>
-
-      <br><br>
-
+      <!--Mesclando o property-binding com o event-binding-->
       <input type="text"
-        (keyup) = "onKeyUp($event)"
-        (keyup.enter)="salvaTexto(valorTexto.value)"
-        (blur)="salvaTexto(valorTexto.value)"
-        #valorTexto/>
-      <p>Valor atual: {{ valorAtual }}</p>
-      <p>Valor salvo: {{ textoSalvo }}</p>
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      />
+      <!--Utilizando o ngModel-->
+      <input type="text" 
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+      />
 
-      <br><br>
+      <!--Two way data binding
+        Junta um binding de propriedades e de eventos de 1 vez só
+      -->
+      <input type="text" [(ngModel)]="nome">
 
-      <span
-        (mouseover)="onMouseOverOut()"
-        (mouseout)="onMouseOverOut()"
-        [class.highlight]="onMouse">
-        Passe o mouse sobre mim!!
-      </span>
+      <p>Você digitou: {{ nome }}</p>
 
+    </div>
+
+    <div>
+      <!--Utilizando o two way data binding com objetos-->
+      <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }}. Moro na rua {{ pessoa.endereco.rua }}, 
+        número {{ pessoa.endereco.numero }}
+      </p>
+      <input type="text" [(ngModel)]="pessoa.nome"/>
+      <input type="text" [(ngModel)]="pessoa.idade"/>
+      <input type="text" [(ngModel)]="pessoa.endereco.rua"/>
+      <input type="text" [(ngModel)]="pessoa.endereco.numero"/>
     </div>
   </article>
 

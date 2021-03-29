@@ -7,38 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  url: string = 'http://enaka.com'
-  textoSalvo: string = ""
+  nome: string = "abcde"
 
-  onMouse: boolean = false;
-
-  getValor(){
-    return 1
+  pessoa: any={
+    nome:"blablabla",
+    idade: 20,
+    endereco: {
+      rua: "rua tal",
+      numero: "4321-B"
+    }
   }
-
-  expressao: boolean = true
-
-  valorAtual: string = ""
-
-  getTrue(){
-    return true
-  }
-
-  botaoClicado(){alert("Botão foi clicado!!")}
-
-  onKeyUp(evento: KeyboardEvent){
-    console.log((<HTMLInputElement>evento.target).value)
-    this.valorAtual = (<HTMLInputElement>evento.target).value
-  }
-
-  salvaTexto(valor){
-    this.textoSalvo = valor
-  }
-  onMouseOverOut(){
-    this.onMouse = !this.onMouse
-  }
-
-  urlImagem = 'https://cdn.pixabay.com/photo/2020/08/07/13/16/plant-5470631_960_720.jpg'
 
   constructor() { }
 
