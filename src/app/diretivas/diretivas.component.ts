@@ -11,6 +11,8 @@ export class DiretivasComponent implements OnInit {
 
   mostrarCursos:boolean = false;
 
+  aba: string = 'home'
+
   onMostrarCursos(){
     this.mostrarCursos = !this.mostrarCursos
   }
