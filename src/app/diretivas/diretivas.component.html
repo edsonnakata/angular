@@ -1,22 +1,7 @@
-<nav class="navbar navbar-dark bg-primary">
-  <div class="nav navbar-nav">
-      <a class="nav-item nav-link"
-        [class.active]="aba == 'home'"
-        (click)="aba = 'home'"
-      >Home</a>
-      <a class="nav-item nav-link"
-        [class.active]="aba == 'arquivo'"
-        (click)="aba = 'arquivo'"
-      >Arquivo</a>
-      <a class="nav-item nav-link"
-        [class.active]="aba == 'lista'"
-        (click)="aba = 'lista'"
-      >Lista</a>
-  </div>
-</nav>
+<h5>*ngFor</h5>
 
-<div class="container" [ngSwitch]="aba">
-  <p *ngSwitchCase="'arquivo'">Mostra a página de arquivos</p>
-  <p *ngSwitchCase="'lista'">Mostra a página de listas</p>
-  <p *ngSwitchDefault>Mostra a página de home</p>
-</div>
+<ul>
+  <li *ngFor="let curso of cursos, let i = index">
+    {{ i + 1 }} - {{ curso }}
+  </li>
+</ul>

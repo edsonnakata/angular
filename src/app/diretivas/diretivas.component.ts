@@ -7,15 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasComponent implements OnInit {
 
-  cursos: string[] = ["Angular 2"]
-
-  mostrarCursos:boolean = false;
-
-  aba: string = 'home'
-
-  onMostrarCursos(){
-    this.mostrarCursos = !this.mostrarCursos
-  }
+  cursos: string[] = ["Angular 2","Java","Ruby","Python"]
 
   constructor() { }
 
