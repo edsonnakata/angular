@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasComponent implements OnInit {
 
-  cursos: string[] = ["Angular 2","Java","Ruby","Python"]
+  meuFavorito: boolean = false
+
+  onClick(){
+    this.meuFavorito = !this.meuFavorito
+  }
 
   constructor() { }
 

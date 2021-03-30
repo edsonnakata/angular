@@ -1,7 +1,21 @@
-<h5>*ngFor</h5>
+<h2>Utilizando o proerty binding de classe</h2>
+<h1>
+  <i class="glyphicon"
+    [class.glyphicon-star-empty]="!meuFavorito"
+    [class.glyphicon-star]="meuFavorito"
+    (click)="onClick()"
+  ></i>
+</h1>
 
-<ul>
-  <li *ngFor="let curso of cursos, let i = index">
-    {{ i + 1 }} - {{ curso }}
-  </li>
-</ul>
+<br>
+
+<h2>Utilizando o ngClass</h2>
+<h1>
+  <i class="glyphicon"
+    [ngClass]="{
+      'glyphicon-star-empty': !meuFavorito,
+      'glyphicon-star': meuFavorito
+    }"
+    (click)="onClick()"
+  ></i>
+</h1>
