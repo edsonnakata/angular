@@ -9,6 +9,7 @@ import { InputPropertyComponent } from './input-property/input-property.componen
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { CicloComponent } from './ciclo/ciclo.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
+import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
     InputPropertyComponent,
     OutputPropertyComponent,
     CicloComponent,
-    DiretivasComponent
+    DiretivasComponent,
+    FundoAmareloDirective
   ],
   imports: [
     BrowserModule,
